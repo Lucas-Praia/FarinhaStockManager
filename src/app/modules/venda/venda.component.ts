@@ -31,14 +31,6 @@ export class VendaComponent implements OnInit {
     this.cartItems = this.apiService.getCartItems();
     this.cartTotal = this.apiService.getCartTotal();
   }
-  addProduct(): void {
-    if (this.newProduct.name && this.newProduct.price >= 0) {
-      this.products.push({ ...this.newProduct, id: this.products.length + 1 });
-      this.newProduct = { id: 0, name: '', price: 0, image: '' };
-    } else {
-      console.error('Preencha todos os campos do produto.');
-    }
-  }
 
   addToCart(product: Product): void {
     this.apiService.addToCart(product, 1);
