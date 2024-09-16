@@ -1,0 +1,44 @@
+
+<p-card class="custom-card">
+  <h2>Lista de Produtos</h2>
+
+  <div class="product-list">
+    <p-card *ngFor="let product of products" class="product-card">
+      <ng-template pTemplate="header">
+        <img [src]="product.image" alt="Imagem do Produto" class="product-image">
+      </ng-template>
+      <ng-template pTemplate="title">
+        <div class="product-title">{{ product.name }}</div>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <div class="product-price">{{ product.price | currency: 'R$' }}</div>
+        <p-button label="Adicionar ao Carrinho" icon="pi pi-shopping-cart" (click)="addToCart(product)" class="p-button-success"></p-button>
+      </ng-template>
+    </p-card>
+  </div>
+</p-card>
+
+<p-card id="cart" class="custom-card">
+  <h2>Carrinho de Compras</h2>
+
+  <p-table [value]="cartItems">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>{{ item.product.name }}</td>
+        <td>{{ item.product.price | currency: 'R$' }}</td>
+        <td>{{ item.quantity }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <div class="cart-total">
+    <h3>Total: {{ cartTotal | currency: 'R$' }}</h3>
+  </div>
+</p-card>

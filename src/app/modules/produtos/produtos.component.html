@@ -1,0 +1,32 @@
+<p-card class="custom-card">
+  <h1>Uarini Grãos Dourados - Adicionar Produtos</h1>
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="productName">Nome do Produto:</label>
+      <input id="productName" pInputText [(ngModel)]="productName" />
+    </div>
+    <div class="p-field">
+      <label for="productPrice">Preço:</label>
+      <input id="productPrice" type="number" pInputText [(ngModel)]="productPrice" />
+    </div>
+    <p-button label="Add Product" icon="pi pi-plus" (onClick)="addProduct()"></p-button>
+  </div>
+
+  <p-table [value]="products" [responsive]="true" class="mt-3">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Nome do Produto</th>
+        <th>Preço</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency: 'R$' }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</p-card>
