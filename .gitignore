@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Django #
 *.log
 *.pot
@@ -110,6 +111,8 @@ GitHub.sublime-settings
 
 # Visual Studio Code #
 =======
+=======
+>>>>>>> 3933cd2360971e26168d286c4c8880ab80ae2c94
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -133,12 +136,16 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
+<<<<<<< HEAD
 >>>>>>> forked-repo/frontend
+=======
+>>>>>>> 3933cd2360971e26168d286c4c8880ab80ae2c94
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 .history
 
@@ -156,6 +163,8 @@ db.sqlite3
 db copy.sqlite3
 static/
 =======
+=======
+>>>>>>> 3933cd2360971e26168d286c4c8880ab80ae2c94
 .history/*
 
 # Miscellaneous
@@ -170,4 +179,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 >>>>>>> forked-repo/frontend
+=======
+>>>>>>> 3933cd2360971e26168d286c4c8880ab80ae2c94
