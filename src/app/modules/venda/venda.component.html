@@ -41,4 +41,6 @@
   <div class="cart-total">
     <h3>Total: {{ cartTotal | currency: 'R$' }}</h3>
   </div>
+
+  <p-button #paymentButton label="Pagamento" icon="pi pi-credit-card" (click)="openPaymentDialog()" class="p-button-warning"></p-button>
 </p-card>

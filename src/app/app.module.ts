@@ -10,9 +10,17 @@ import { VendaComponent } from './modules/venda/venda.component';
 import { HistoricoComponent } from './modules/historico/historico.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import {TableModule} from "primeng/table";
-import {Button} from "primeng/button";
+import {Button, ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
 import {FormsModule} from "@angular/forms";
+import { DialogpagamentoComponent } from './modules/dialogpagamento/dialogpagamento.component';
+import {DialogModule} from "primeng/dialog";
+import {RadioButtonModule} from "primeng/radiobutton";
+import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +29,8 @@ import {FormsModule} from "@angular/forms";
     ProdutosComponent,
     VendaComponent,
     HistoricoComponent,
-    DashboardComponent
+    DashboardComponent,
+    DialogpagamentoComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +39,12 @@ import {FormsModule} from "@angular/forms";
     TableModule,
     Button,
     CardModule,
-    FormsModule
+    FormsModule,
+    DialogModule,
+    ButtonModule,
+    RadioButtonModule,
+    MatRadioButton,
+    MatRadioGroup,
   ],
   providers: [],
   bootstrap: [AppComponent]
